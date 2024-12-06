@@ -1,12 +1,18 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react';
 
 import './App.css'
+
+import BarChart from './components/BarChart';
+import LineChart from './components/LineChart';
+import ScatterChart from './components/ScatterChart';
+import BubbleChart from './components/BubbleChart';
+import ChartComponent from './components/ChartComponent';
 
 function App() {
   const [chartData, setChartData] = useState(null);
 
 useEffect(() => {
-  fetch('/data.json')
+  fetch('public/financial_data.json')
     .then((response) => response.json())
     .then((data) => setChartData(data));
 }, []);

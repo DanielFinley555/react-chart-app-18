@@ -1,3 +1,5 @@
+import ChartComponent from './ChartComponent';
+
 const BarChart = ({ data }) => {
     const barChartData = {
       labels: data.months,
@@ -22,3 +24,5 @@ const BarChart = ({ data }) => {
 
       return <ChartComponent type="bar" data={barChartData} options={barChartOptions} />;
     };
+
+    export default BarChart;

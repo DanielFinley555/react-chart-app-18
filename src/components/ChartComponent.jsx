@@ -1,6 +1,9 @@
+//Task 2: Create the Reusable ChartComponent
+
 import React, { useEffect, useRef } from 'react';
 import Chart from 'chart.js/auto';
 
+//implement chart component that accepts type, data, and options
 const ChartComponent = ({ type, data, options }) => {
     const chartRef = useRef(null);
     const chartInstanceRef = useRef(null);
@@ -26,8 +29,8 @@ const ChartComponent = ({ type, data, options }) => {
           };
 
         }, [type, data, options]);
-    }
 
         return <canvas ref={chartRef}></canvas>;
+    }
 
         export default ChartComponent;

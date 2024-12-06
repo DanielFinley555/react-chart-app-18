@@ -1,5 +1,7 @@
+import ChartComponent from './ChartComponent';
+
 const BubbleChart = ({ data }) => {
-    const BubbleChartData = {
+    const bubbleChartData = {
       labels: data.months,
       datasets: [
         {
@@ -12,7 +14,7 @@ const BubbleChart = ({ data }) => {
       ],
     };
 
-    const BubbleChartOptions = {
+    const bubbleChartOptions = {
         scales: {
           y: {
             beginAtZero: true,
@@ -22,3 +24,5 @@ const BubbleChart = ({ data }) => {
 
       return <ChartComponent type="bubble" data={bubbleChartData} options={bubbleChartOptions} />;
     };
+
+    export default BubbleChart;
