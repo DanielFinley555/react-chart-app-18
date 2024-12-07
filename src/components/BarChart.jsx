@@ -1,3 +1,5 @@
+//creating Bar Chart for Monthly Sales
+
 import ChartComponent from './ChartComponent';
 
 const BarChart = ({ data }) => {

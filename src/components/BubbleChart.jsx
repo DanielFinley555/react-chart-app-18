@@ -26,3 +26,4 @@ const BubbleChart = ({ data }) => {
     };
 
     export default BubbleChart;
+    

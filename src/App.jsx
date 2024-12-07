@@ -11,12 +11,15 @@ import ChartComponent from './components/ChartComponent';
 function App() {
   const [chartData, setChartData] = useState(null);
 
+
+//Task 4: Fetch Data for Charts
 useEffect(() => {
   fetch('public/financial_data.json')
     .then((response) => response.json())
     .then((data) => setChartData(data));
 }, []);
 
+//display loading message
 if (!chartData) {
   return <div>Loading...</div>;
 }

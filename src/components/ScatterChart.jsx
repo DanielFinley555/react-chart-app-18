@@ -26,3 +26,4 @@ const ScatterChart = ({ data }) => {
     };
 
     export default ScatterChart;
+    
