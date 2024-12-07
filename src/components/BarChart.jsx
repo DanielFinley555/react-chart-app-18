@@ -2,6 +2,8 @@
 
 import ChartComponent from './ChartComponent';
 
+//used BarChart template from notes, and then changed around variables to fit the data
+
 const BarChart = ({ data }) => {
     const barChartData = {
       labels: data.months,

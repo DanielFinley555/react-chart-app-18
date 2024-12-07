@@ -8,9 +8,11 @@ const LineChart = ({ data }) => {
       datasets: [
         {
           label: 'Monthly Profits',
+          //changing y axis to profits
           data: data.profits,
-          backgroundColor: 'rgba(75, 192, 192, 0.2)',
-          borderColor: 'rgba(75, 192, 192, 1)',
+          //changing the color for the line chart to make it stand out
+          backgroundColor: 'rgba(192, 0, 0, 0.2)',
+          borderColor: 'rgba(192, 0, 0, 1)',
           borderWidth: 1,
         },
       ],
@@ -24,6 +26,7 @@ const LineChart = ({ data }) => {
         },
       };
 
+      //changing chart type to line
       return <ChartComponent type="line" data={lineChartData} options={lineChartOptions} />;
     };
 

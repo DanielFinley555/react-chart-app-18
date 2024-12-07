@@ -2,13 +2,16 @@ import ChartComponent from './ChartComponent';
 
 const ScatterChart = ({ data }) => {
     const scatterChartData = {
-      labels: data.months,
+        //changing x axis to expenses
+      labels: data.expenses,
       datasets: [
         {
-          label: 'Monthly Sales',
-          data: data.sales,
-          backgroundColor: 'rgba(75, 192, 192, 0.2)',
-          borderColor: 'rgba(75, 192, 192, 1)',
+          label: 'Expenses vs. Profits',
+          //changing y axis to profits
+          data: data.profits,
+          //changing the color for the scatter chart to make it stand out
+          backgroundColor: 'rgba(0, 192, 0, 0.2)',
+          borderColor: 'rgba(0, 192, 0, 1)',
           borderWidth: 1,
         },
       ],
@@ -22,8 +25,8 @@ const ScatterChart = ({ data }) => {
         },
       };
 
-      return <ChartComponent type="bar" data={scatterChartData} options={scatterChartOptions} />;
+      //changing chart type to scatter
+      return <ChartComponent type="scatter" data={scatterChartData} options={scatterChartOptions} />;
     };
 
     export default ScatterChart;
-    
